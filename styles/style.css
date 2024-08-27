@@ -1,0 +1,725 @@
+/* Variables */
+:root {
+  --font-family: 'Noto Sans TC', sans-serif;
+  --bg-color: #fcfcfc;
+  --primary-color: #E797A0;
+  --secondary-color: #FAE9EB;
+}
+
+/* Variables end */
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 10vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav div.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav div.logo img {
+  width: 3rem;
+  height: 3rem;
+}
+
+nav div.logo h1 {
+  color: var(--primary-color);
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+nav ul.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul.navigation li a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 1.25rem;
+}
+
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+section.w {
+  Width: 80%;
+  margin: 0 auto;
+}
+
+section.home {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../images/BackgroundImage.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+section.home div.left {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 400px;
+          flex: 2 1 400px;
+  height: 40vh;
+}
+
+section.home div.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 400px;
+          flex: 1 1 400px;
+  height: 40vh;
+}
+
+section.home div.right h1 {
+  margin: 1rem 0 2rem 0;
+  font-size: 2.5rem;
+}
+
+section.home div.right p {
+  font-size: 1.5rem;
+}
+
+section.home div.right div.icon {
+  margin: 1rem 0;
+}
+
+section.home div.right a.button {
+  border-radius: 45px;
+  padding: 0.5rem 1.25rem;
+  font-size: 1.25rem;
+  border: none;
+  background-color: var(--primary-color);
+}
+
+section.home div.right a.button:hover {
+  color: black;
+}
+
+section.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 80vh;
+}
+
+section.about section.left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+}
+
+section.about section.left h2 {
+  font-size: 2.5rem;
+  margin: 3rem 0 5rem 0;
+}
+
+section.about section.left p {
+  font-size: 1rem;
+  text-align: left;
+}
+
+section.about section.right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.about section.right img {
+  width: 25vw;
+  border-radius: 50%;
+}
+
+section.skills h2 {
+  font-size: 2.5rem;
+  margin: 3rem 0 2.5rem 0;
+}
+
+section.skills section.container {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #e7e7e7;
+}
+
+section.skills section.container section.left {
+  margin-right: 1rem;
+}
+
+section.skills section.container section.left p {
+  text-align: left;
+}
+
+section.skills section.container section.right {
+  margin-right: 1rem;
+}
+
+section.skills section.container section.right p {
+  text-align: left;
+}
+
+.container {
+  margin: 0 auto 2rem;
+  width: 30vw;
+  min-width: 300px;
+  text-align: center;
+}
+
+.progress2 {
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.progress-bar2 {
+  height: 18px;
+  line-height: 18px;
+  border-radius: 30px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.05)));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  -webkit-transition-property: width, background-color;
+  transition-property: width, background-color;
+}
+
+.progress-moved90 .progress-bar2 {
+  width: 90%;
+  background-color: #EF476F;
+  -webkit-animation: progressAnimation 6s;
+          animation: progressAnimation 6s;
+}
+
+.progress-moved80 .progress-bar2 {
+  width: 80%;
+  background-color: #EF476F;
+  -webkit-animation: progressAnimation 6s;
+          animation: progressAnimation 6s;
+}
+
+.progress-moved70 .progress-bar2 {
+  width: 70%;
+  background-color: #EF476F;
+  -webkit-animation: progressAnimation 6s;
+          animation: progressAnimation 6s;
+}
+
+.progress-moved60 .progress-bar2 {
+  width: 60%;
+  background-color: #EF476F;
+  -webkit-animation: progressAnimation 6s;
+          animation: progressAnimation 6s;
+}
+
+@-webkit-keyframes progressAnimation {
+  0% {
+    width: 5%;
+    background-color: #F9BCCA;
+  }
+  100% {
+    background-color: #EF476F;
+  }
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 5%;
+    background-color: #F9BCCA;
+  }
+  100% {
+    background-color: #EF476F;
+  }
+}
+
+section.projects h2 {
+  font-size: 2.5rem;
+  margin: 5rem auto 2.5rem;
+  Width: 80%;
+}
+
+section.projects div.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+section.projects div.container div.p1,
+section.projects div.container div.p2,
+section.projects div.container div.p3,
+section.projects div.container div.p4 {
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+section.projects div.container div.p1 {
+  margin: 1rem 1rem;
+  width: 300px;
+  background-color: var(--secondary-color);
+}
+
+section.projects div.container div.p1 div.pic {
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/pexels-ryutaro-tsukata-5745010.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+section.projects div.container div.p1 div.pic a {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+section.projects div.container div.p1 div.desc {
+  padding: 1rem 1rem;
+  width: 100%;
+  height: 315px;
+}
+
+section.projects div.container div.p1 div.desc h1 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+section.projects div.container div.p2 {
+  width: 300px;
+  margin: 1rem 1rem;
+  background-color: var(--secondary-color);
+}
+
+section.projects div.container div.p2 div.pic {
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/pexels-recal-media-60217.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+section.projects div.container div.p2 div.pic a {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+section.projects div.container div.p2 div.desc {
+  padding: 1rem 1rem;
+  width: 100%;
+  height: 315px;
+}
+
+section.projects div.container div.p2 div.desc h1 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+section.projects div.container div.p3 {
+  width: 300px;
+  margin: 1rem 1rem;
+  background-color: var(--secondary-color);
+}
+
+section.projects div.container div.p3 div.pic {
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/pexels-jeshootscom-442573.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+section.projects div.container div.p3 div.pic a {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+section.projects div.container div.p3 div.desc {
+  padding: 1rem 1rem;
+  width: 100%;
+  height: 315px;
+}
+
+section.projects div.container div.p3 div.desc h1 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+section.projects div.container div.p4 {
+  width: 300px;
+  margin: 1rem 1rem;
+  background-color: var(--secondary-color);
+}
+
+section.projects div.container div.p4 div.pic {
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/pexels-katerina-holmes-5905716.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+section.projects div.container div.p4 div.pic a {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+section.projects div.container div.p4 div.desc {
+  padding: 1rem 1rem;
+  width: 100%;
+  height: 315px;
+}
+
+section.projects div.container div.p4 div.desc h1 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+section.contact {
+  min-width: 80vw;
+  width: 80%;
+}
+
+section.contact h2 {
+  font-size: 2.5rem;
+  margin: 5rem auto 2.5rem;
+}
+
+section.contact div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.contact div div.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  width: 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #FFB9B9;
+}
+
+section.contact div div.left {
+  width: 70%;
+  background-color: #DFDDDD;
+}
+
+section.contact div div.left form {
+  margin: 0 6rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+}
+
+section.contact div div.left form label {
+  margin: 1rem 0 0 0;
+}
+
+section.contact div div.left form button {
+  margin: 1rem 0;
+  border-radius: 20px;
+  width: 100px;
+  border-radius: 45px;
+  padding: 0.25rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--primary-color);
+}
+
+section.contact div div.left form input,
+section.contact div div.left form textarea {
+  width: 100%;
+  border-radius: 10px;
+}
+
+section.contact div div.left form input {
+  height: 1.5rem;
+}
+
+section.footer {
+  padding: 2rem 0;
+  height: 20vh;
+  color: #8f8e8e;
+}
+
+@media screen and (max-width: 720px) {
+  /*changes reflects on screen with a width of 720px and below*/
+  nav {
+    height: 5vh;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-color);
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  nav div.logo img {
+    width: 3rem;
+    height: 3rem;
+  }
+  nav div.logo h1 {
+    font-size: 1rem;
+  }
+  nav ul.navigation {
+    gap: 1.5rem;
+  }
+  nav ul.navigation li a {
+    font-size: 1rem;
+  }
+  section.home {
+    height: 30vh;
+    position: relative;
+  }
+  section.home div.right {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+  }
+  section.home div.right h1 {
+    margin: 1rem 0 1rem 0;
+    font-size: 1.5rem;
+  }
+  section.home div.right p {
+    font-size: 0.75rem;
+  }
+  section.home div.right div.icon {
+    margin: 1rem 0;
+  }
+  section.home div.right div.icon img {
+    width: 1.5rem;
+  }
+  section.home div.right a {
+    padding: 0.25rem 1rem;
+    font-size: 0.75rem;
+  }
+  section.about {
+    min-height: 50vh;
+  }
+  section.about section.left h2 {
+    font-size: 1.75rem;
+    margin: 3rem 0 3rem 0;
+  }
+  section.about section.left p {
+    font-size: 0.75rem;
+  }
+  section.about section.right img {
+    width: 30vw;
+  }
+  section.skills h2 {
+    font-size: 1.75rem;
+  }
+  section.projects h2 {
+    font-size: 1.75rem;
+  }
+  section.contact h2 {
+    font-size: 1.75rem;
+    width: 80%;
+  }
+  section.contact div div.right p {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /*changes reflects on screen with a width of 720px and below*/
+  nav ul.navigation {
+    position: fixed;
+    background-color: var(--bg-color);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 5vh;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  nav ul.show {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  nav .burger-menu {
+    display: block;
+  }
+  section.home {
+    position: relative;
+    background-color: #EF476F;
+  }
+  section.home div.right {
+    position: absolute;
+    top: 50px;
+    color: #e41e4c;
+  }
+  section.about {
+    min-height: 70vh;
+  }
+  section.about section.left h2 {
+    font-size: 1.75rem;
+    margin: 3rem 0 3rem 0;
+  }
+  section.about section.left p {
+    font-size: 0.75rem;
+  }
+  section.about section.right img {
+    width: 45vw;
+  }
+  section.contact {
+    width: 100%;
+  }
+  section.contact h2 {
+    font-size: 1.75rem;
+    width: 80%;
+  }
+  section.contact div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.contact div div.right {
+    width: 100%;
+  }
+  section.contact div div.right div.icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.contact div div.left {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
